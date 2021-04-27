@@ -87,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>
@@ -125,6 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="music_48.ico" />
+    <None Include="Resources\files-medical_32.png" />
+    <None Include="Resources\business-time_32.png" />
+    <None Include="Resources\11-logo-hv_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

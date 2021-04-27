@@ -42,7 +42,7 @@ namespace WindowsMedia_with_List
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            list_FileNhac.Items.Clear();
+            //list_FileNhac.Items.Clear();
             if (CheckStartup())
             {
                 checkBox2.Checked = true;
@@ -51,14 +51,14 @@ namespace WindowsMedia_with_List
             {
                 checkBox2.Checked = false;
             }
-            notifyIcon1.Visible = true;
+           // notifyIcon1.Visible = false;
             // Hiện BaloonTip hoặc không
-            // notifyIcon1.ShowBalloonTip(10);
+             //notifyIcon1.ShowBalloonTip(10);
             // Chọn ẩn
-            this.Hide();
+            //this.Hide();
             // Hoặc
-            this.ShowInTaskbar = false;
-            WindowState = FormWindowState.Minimized;
+            //this.ShowInTaskbar = false;
+           // WindowState = FormWindowState.Normal;
         }
         private void list_FileNhac_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -89,7 +89,7 @@ namespace WindowsMedia_with_List
         }
         int dem = 0;
         Random rd = new Random();
-        bool is_read = false;
+       public static bool is_read = false;
        
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -125,69 +125,76 @@ namespace WindowsMedia_with_List
             //        chaytime();
             //    }  
             //}
-            if (is_read == false)
+            try
             {
-                if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+                if (is_read == false)
                 {
-                    is_read = true;
-                    DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day2.xml", XmlReadMode.Auto);
-                    Listnhac = ds.Tables[0];
-                    day_of_week = DateTime.Now;
+                    if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+                    {
+                        is_read = true;
+                        DataSet ds = new DataSet();
+                        ds.ReadXml(Environment.CurrentDirectory + @"\day2.xml", XmlReadMode.Auto);
+                        Listnhac = ds.Tables[0];
+                        day_of_week = DateTime.Now;
+                    }
+                    if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
+                    {
+                        is_read = true;
+                        DataSet ds = new DataSet();
+                        ds.ReadXml(Environment.CurrentDirectory + @"\day3.xml", XmlReadMode.Auto);
+                        Listnhac = ds.Tables[0];
+                        day_of_week = DateTime.Now;
+                    }
+                    if (DateTime.Now.DayOfWeek == DayOfWeek.Wednesday)
+                    {
+                        is_read = true;
+                        DataSet ds = new DataSet();
+                        ds.ReadXml(Environment.CurrentDirectory + @"\day4.xml", XmlReadMode.Auto);
+                        Listnhac = ds.Tables[0];
+                        day_of_week = DateTime.Now;
+                    }
+                    if (DateTime.Now.DayOfWeek == DayOfWeek.Thursday)
+                    {
+                        is_read = true;
+                        DataSet ds = new DataSet();
+                        ds.ReadXml(Environment.CurrentDirectory + @"\day5.xml", XmlReadMode.Auto);
+                        Listnhac = ds.Tables[0];
+                        day_of_week = DateTime.Now;
+                    }
+                    if (DateTime.Now.DayOfWeek == DayOfWeek.Friday)
+                    {
+                        is_read = true;
+                        DataSet ds = new DataSet();
+                        ds.ReadXml(Environment.CurrentDirectory + @"\day6.xml", XmlReadMode.Auto);
+                        Listnhac = ds.Tables[0];
+                        day_of_week = DateTime.Now;
+                    }
+                    if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
+                    {
+                        is_read = true;
+                        DataSet ds = new DataSet();
+                        ds.ReadXml(Environment.CurrentDirectory + @"\day7.xml", XmlReadMode.Auto);
+                        Listnhac = ds.Tables[0];
+                        day_of_week = DateTime.Now;
+                    }
+                    if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+                    {
+                        is_read = true;
+                        DataSet ds = new DataSet();
+                        ds.ReadXml(Environment.CurrentDirectory + @"\day8.xml", XmlReadMode.Auto);
+                        Listnhac = ds.Tables[0];
+                        day_of_week = DateTime.Now;
+                    }
                 }
-                if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
+                if (day_of_week.DayOfWeek != DateTime.Now.DayOfWeek)
                 {
-                    is_read = true;
-                    DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day3.xml", XmlReadMode.Auto);
-                    Listnhac = ds.Tables[0];
-                    day_of_week = DateTime.Now;
-                }
-                if (DateTime.Now.DayOfWeek == DayOfWeek.Wednesday)
-                {
-                    is_read = true;
-                    DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day4.xml", XmlReadMode.Auto);
-                    Listnhac = ds.Tables[0];
-                    day_of_week = DateTime.Now;
-                }
-                if (DateTime.Now.DayOfWeek == DayOfWeek.Thursday)
-                {
-                    is_read = true;
-                    DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day5.xml", XmlReadMode.Auto);
-                    Listnhac = ds.Tables[0];
-                    day_of_week = DateTime.Now;
-                }
-                if (DateTime.Now.DayOfWeek == DayOfWeek.Friday)
-                {
-                    is_read = true;
-                    DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day6.xml", XmlReadMode.Auto);
-                    Listnhac = ds.Tables[0];
-                    day_of_week = DateTime.Now;
-                }
-                if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
-                {
-                    is_read = true;
-                    DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day7.xml", XmlReadMode.Auto);
-                    Listnhac = ds.Tables[0];
-                    day_of_week = DateTime.Now;
-                }
-                if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
-                {
-                    is_read = true;
-                    DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day8.xml", XmlReadMode.Auto);
-                    Listnhac = ds.Tables[0];
-                    day_of_week = DateTime.Now;
+                    is_read = false;
                 }
             }
-            if (day_of_week.DayOfWeek != DateTime.Now.DayOfWeek)
+            catch (Exception)
             {
-                is_read = false;
             }
+           
         }
         private bool check(int a) 
         {
@@ -425,10 +432,7 @@ namespace WindowsMedia_with_List
             }
             catch (Exception)
             {
-
-
             }
-           
         }
 
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
@@ -438,10 +442,11 @@ namespace WindowsMedia_with_List
 
         private void càiĐătToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Show();
-            this.WindowState = FormWindowState.Normal;
-            this.ShowInTaskbar = true;
-            this.StartPosition = FormStartPosition.CenterScreen;
+            Setting st = new Setting();
+            st.Show();
+           // this.WindowState = FormWindowState.Normal;
+           // this.ShowInTaskbar = true;
+           // this.StartPosition = FormStartPosition.CenterScreen;
             
            
         }
@@ -459,8 +464,9 @@ namespace WindowsMedia_with_List
                 notifyIcon1.Visible = false;
                 // Cách này
                 WindowState = FormWindowState.Normal;
+               // this.BringToFront();
                 this.Show();
-               // this.ShowInTaskbar = true;
+                this.ShowInTaskbar = true;
                 // Hoặc
                 // Hoặc cả 2 miễn là phải tương ứng với lúc ẩn
             }
@@ -526,6 +532,11 @@ namespace WindowsMedia_with_List
             catch (Exception)
             {
             }  
+        }
+
+        private void notifyIcon1_Click(object sender, EventArgs e)
+        {
+            this.Show();
         }
 
         private bool CheckStartup() 

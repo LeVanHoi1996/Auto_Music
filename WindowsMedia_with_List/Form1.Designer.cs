@@ -62,6 +62,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
@@ -69,12 +70,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.thứToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(872, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(872, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,14 +86,15 @@
             this.openFileToolStripMenuItem,
             this.openFileCodinhToolStripMenuItem,
             this.btSetting});
+            this.fileToolStripMenuItem.Image = global::WindowsMedia_with_List.Properties.Resources.business_time_32;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(62, 25);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openFileToolStripMenuItem.Text = "&Open File...";
             this.openFileToolStripMenuItem.Visible = false;
             this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
@@ -99,7 +102,7 @@
             // openFileCodinhToolStripMenuItem
             // 
             this.openFileCodinhToolStripMenuItem.Name = "openFileCodinhToolStripMenuItem";
-            this.openFileCodinhToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.openFileCodinhToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openFileCodinhToolStripMenuItem.Text = "Open File codinh...";
             this.openFileCodinhToolStripMenuItem.Visible = false;
             this.openFileCodinhToolStripMenuItem.Click += new System.EventHandler(this.openFileCodinhToolStripMenuItem_Click);
@@ -107,7 +110,7 @@
             // btSetting
             // 
             this.btSetting.Name = "btSetting";
-            this.btSetting.Size = new System.Drawing.Size(173, 22);
+            this.btSetting.Size = new System.Drawing.Size(180, 22);
             this.btSetting.Text = "Setting";
             this.btSetting.Click += new System.EventHandler(this.btSetting_Click);
             // 
@@ -182,9 +185,9 @@
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter1.Location = new System.Drawing.Point(869, 24);
+            this.splitter1.Location = new System.Drawing.Point(869, 29);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 528);
+            this.splitter1.Size = new System.Drawing.Size(3, 523);
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
@@ -220,16 +223,17 @@
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "start";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(353, 5);
+            this.checkBox2.Location = new System.Drawing.Point(724, 532);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(113, 17);
+            this.checkBox2.Size = new System.Drawing.Size(141, 17);
             this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "Auto start with Wd";
+            this.checkBox2.Text = "Khởi động cùng window";
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
@@ -264,6 +268,7 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "AuTo_Music";
             this.notifyIcon1.Visible = true;
+            this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
             this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
             // 
             // contextMenuStrip1
@@ -317,28 +322,39 @@
             // 
             this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 24);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 29);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(869, 528);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(869, 523);
             this.axWindowsMediaPlayer1.TabIndex = 4;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::WindowsMedia_with_List.Properties.Resources._11_logo_hv_1;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(721, 29);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(148, 56);
+            this.button3.TabIndex = 11;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 552);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.lisl_codinh);
             this.Controls.Add(this.list_FileNhac);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -390,6 +406,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem btSetting;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Button button3;
     }
 }
 
