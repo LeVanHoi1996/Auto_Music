@@ -101,8 +101,8 @@
             this.btluu = new System.Windows.Forms.Button();
             this.btxoa = new System.Windows.Forms.Button();
             this.btsua = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btthem = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.Thu2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -783,21 +783,21 @@
             this.btsua.UseVisualStyleBackColor = true;
             this.btsua.Click += new System.EventHandler(this.button2_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // btthem
             // 
             this.btthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btthem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btthem.Location = new System.Drawing.Point(59, 16);
+            this.btthem.Location = new System.Drawing.Point(60, 16);
             this.btthem.Name = "btthem";
             this.btthem.Size = new System.Drawing.Size(92, 23);
             this.btthem.TabIndex = 0;
             this.btthem.Text = "Thêm";
             this.btthem.UseVisualStyleBackColor = true;
             this.btthem.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Setting
             // 

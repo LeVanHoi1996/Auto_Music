@@ -18,7 +18,7 @@ namespace WindowsMedia_with_List
             XmlNode xmlnode = xmldoc.DocumentElement.ChildNodes.Item(a);
             XmlElement eMusic, eten, eid, edd, eTG;
             eMusic = xmldoc.CreateElement("ten");
-            eMusic.InnerText = "Music";
+            eMusic.InnerText = "Music"; 
 
 
             xmldoc.DocumentElement.AppendChild(eMusic);
@@ -36,7 +36,8 @@ namespace WindowsMedia_with_List
             {
                 var xmlDoc = XDocument.Load(@fileName);
                 // var time = DateTime.Now.ToUniversalTime();
-                var time = DateTime.Now.GetHashCode();
+                Random rd = new Random();
+                var time = rd.Next(1,100000);
                 //  var currentTimeStamp = ((DateTimeOffset)DateTime.Now).ToUnixTimeMilliseconds();
                 xmlDoc.Element("Musics").Add(new XElement("Music",
                     new XAttribute("id", time),

@@ -103,6 +103,8 @@ namespace WindowsMedia_with_List
                 btxoa.Enabled = false;
                 btluu.Enabled = true;
             }
+            Random rd = new Random();
+           txtid.Text = rd.Next(1, 100000).ToString();
             // update_ToDocument(1)
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
