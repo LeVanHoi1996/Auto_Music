@@ -133,7 +133,7 @@ namespace WindowsMedia_with_List
                     {
                         is_read = true;
                         DataSet ds = new DataSet();
-                        ds.ReadXml(Environment.CurrentDirectory + @"\day2.xml", XmlReadMode.Auto);
+                        ds.ReadXml(Application.StartupPath + @"\day2.xml", XmlReadMode.Auto);
                         Listnhac = ds.Tables[0];
                         day_of_week = DateTime.Now;
                     }
@@ -141,7 +141,7 @@ namespace WindowsMedia_with_List
                     {
                         is_read = true;
                         DataSet ds = new DataSet();
-                        ds.ReadXml(Environment.CurrentDirectory + @"\day3.xml", XmlReadMode.Auto);
+                        ds.ReadXml(Application.StartupPath + @"\day3.xml", XmlReadMode.Auto);
                         Listnhac = ds.Tables[0];
                         day_of_week = DateTime.Now;
                     }
@@ -149,7 +149,7 @@ namespace WindowsMedia_with_List
                     {
                         is_read = true;
                         DataSet ds = new DataSet();
-                        ds.ReadXml(Environment.CurrentDirectory + @"\day4.xml", XmlReadMode.Auto);
+                        ds.ReadXml(Application.StartupPath + @"\day4.xml", XmlReadMode.Auto);
                         Listnhac = ds.Tables[0];
                         day_of_week = DateTime.Now;
                     }
@@ -157,7 +157,7 @@ namespace WindowsMedia_with_List
                     {
                         is_read = true;
                         DataSet ds = new DataSet();
-                        ds.ReadXml(Environment.CurrentDirectory + @"\day5.xml", XmlReadMode.Auto);
+                        ds.ReadXml(Application.StartupPath + @"\day5.xml", XmlReadMode.Auto);
                         Listnhac = ds.Tables[0];
                         day_of_week = DateTime.Now;
                     }
@@ -165,7 +165,7 @@ namespace WindowsMedia_with_List
                     {
                         is_read = true;
                         DataSet ds = new DataSet();
-                        ds.ReadXml(Environment.CurrentDirectory + @"\day6.xml", XmlReadMode.Auto);
+                        ds.ReadXml(Application.StartupPath + @"\day6.xml", XmlReadMode.Auto);
                         Listnhac = ds.Tables[0];
                         day_of_week = DateTime.Now;
                     }
@@ -173,7 +173,7 @@ namespace WindowsMedia_with_List
                     {
                         is_read = true;
                         DataSet ds = new DataSet();
-                        ds.ReadXml(Environment.CurrentDirectory + @"\day7.xml", XmlReadMode.Auto);
+                        ds.ReadXml(Application.StartupPath + @"\day7.xml", XmlReadMode.Auto);
                         Listnhac = ds.Tables[0];
                         day_of_week = DateTime.Now;
                     }
@@ -181,7 +181,7 @@ namespace WindowsMedia_with_List
                     {
                         is_read = true;
                         DataSet ds = new DataSet();
-                        ds.ReadXml(Environment.CurrentDirectory + @"\day8.xml", XmlReadMode.Auto);
+                        ds.ReadXml(Application.StartupPath + @"\day8.xml", XmlReadMode.Auto);
                         Listnhac = ds.Tables[0];
                         day_of_week = DateTime.Now;
                     }

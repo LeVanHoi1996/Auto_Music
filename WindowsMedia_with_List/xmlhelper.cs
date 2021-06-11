@@ -19,8 +19,6 @@ namespace WindowsMedia_with_List
             XmlElement eMusic, eten, eid, edd, eTG;
             eMusic = xmldoc.CreateElement("ten");
             eMusic.InnerText = "Music"; 
-
-
             xmldoc.DocumentElement.AppendChild(eMusic);
             //xmlnode["ten"].InnerText = item[0].ToString();
             //xmlnode["id"].InnerText = item[1].ToString();

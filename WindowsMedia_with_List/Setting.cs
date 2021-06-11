@@ -35,43 +35,43 @@ namespace WindowsMedia_with_List
                 if (tabControl1.SelectedIndex == 0)
                 {
                     DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day2.xml", XmlReadMode.Auto);
+                    ds.ReadXml(Application.StartupPath + @"\day2.xml", XmlReadMode.Auto);
                     dataGridView1.DataSource = ds.Tables[0];
                 }
                 else if (tabControl1.SelectedIndex == 1)
                 {
                     DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day3.xml", XmlReadMode.Auto);
+                    ds.ReadXml(Application.StartupPath + @"\day3.xml", XmlReadMode.Auto);
                     dataGridView2.DataSource = ds.Tables[0];
                 }
                 else if (tabControl1.SelectedIndex == 2)
                 {
                     DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day4.xml", XmlReadMode.Auto);
+                    ds.ReadXml(Application.StartupPath + @"\day4.xml", XmlReadMode.Auto);
                     dataGridView3.DataSource = ds.Tables[0];
                 }
                 else if (tabControl1.SelectedIndex == 3)
                 {
                     DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day5.xml", XmlReadMode.Auto);
+                    ds.ReadXml(Application.StartupPath + @"\day5.xml", XmlReadMode.Auto);
                     dataGridView4.DataSource = ds.Tables[0];
                 }
                 else if (tabControl1.SelectedIndex == 4)
                 {
                     DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day6.xml", XmlReadMode.Auto);
+                    ds.ReadXml(Application.StartupPath + @"\day6.xml", XmlReadMode.Auto);
                     dataGridView5.DataSource = ds.Tables[0];
                 }
                 else if (tabControl1.SelectedIndex == 5)
                 {
                     DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day7.xml", XmlReadMode.Auto);
+                    ds.ReadXml(Application.StartupPath + @"\day7.xml", XmlReadMode.Auto);
                     dataGridView6.DataSource = ds.Tables[0];
                 }
                 else if (tabControl1.SelectedIndex == 6)
                 {
                     DataSet ds = new DataSet();
-                    ds.ReadXml(Environment.CurrentDirectory + @"\day8.xml", XmlReadMode.Auto);
+                    ds.ReadXml(Application.StartupPath + @"\day8.xml", XmlReadMode.Auto);
                     dataGridView7.DataSource = ds.Tables[0];
                 }
             }
