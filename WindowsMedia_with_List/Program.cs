@@ -16,7 +16,7 @@ namespace WindowsMedia_with_List
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Start());
+            Application.Run(new Form1());
         }
     }
 }
