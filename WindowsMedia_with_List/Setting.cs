@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using static System.Windows.Forms.AxHost;
 
 namespace WindowsMedia_with_List
 {
@@ -36,43 +38,57 @@ namespace WindowsMedia_with_List
                 {
                     DataSet ds = new DataSet();
                     ds.ReadXml(Application.StartupPath + @"\day2.xml", XmlReadMode.Auto);
-                    dataGridView1.DataSource = ds.Tables[0];
+                    if (ds.Tables.Count > 0)
+                        dataGridView1.DataSource = ds?.Tables[0];
+                    else if (dataGridView1.Rows.Count == 1) dataGridView1.Rows.RemoveAt(0);
                 }
                 else if (tabControl1.SelectedIndex == 1)
                 {
                     DataSet ds = new DataSet();
                     ds.ReadXml(Application.StartupPath + @"\day3.xml", XmlReadMode.Auto);
-                    dataGridView2.DataSource = ds.Tables[0];
+                    if (ds.Tables.Count > 0)
+                        dataGridView2.DataSource = ds?.Tables[0];
+                    else if (dataGridView2.Rows.Count == 1) dataGridView2.Rows.RemoveAt(0);
                 }
                 else if (tabControl1.SelectedIndex == 2)
                 {
                     DataSet ds = new DataSet();
                     ds.ReadXml(Application.StartupPath + @"\day4.xml", XmlReadMode.Auto);
-                    dataGridView3.DataSource = ds.Tables[0];
+                    if (ds.Tables.Count > 0)
+                        dataGridView3.DataSource = ds?.Tables[0];
+                    else if (dataGridView3.Rows.Count == 1) dataGridView3.Rows.RemoveAt(0);
                 }
                 else if (tabControl1.SelectedIndex == 3)
                 {
                     DataSet ds = new DataSet();
                     ds.ReadXml(Application.StartupPath + @"\day5.xml", XmlReadMode.Auto);
-                    dataGridView4.DataSource = ds.Tables[0];
+                    if (ds.Tables.Count > 0)
+                        dataGridView4.DataSource = ds?.Tables[0];
+                    else if (dataGridView4.Rows.Count == 1) dataGridView4.Rows.RemoveAt(0);
                 }
                 else if (tabControl1.SelectedIndex == 4)
                 {
                     DataSet ds = new DataSet();
                     ds.ReadXml(Application.StartupPath + @"\day6.xml", XmlReadMode.Auto);
-                    dataGridView5.DataSource = ds.Tables[0];
+                    if (ds.Tables.Count > 0)
+                        dataGridView5.DataSource = ds?.Tables[0];
+                    else if (dataGridView5.Rows.Count == 1) dataGridView5.Rows.RemoveAt(0);
                 }
                 else if (tabControl1.SelectedIndex == 5)
                 {
                     DataSet ds = new DataSet();
                     ds.ReadXml(Application.StartupPath + @"\day7.xml", XmlReadMode.Auto);
-                    dataGridView6.DataSource = ds.Tables[0];
+                    if (ds.Tables.Count > 0)
+                        dataGridView6.DataSource = ds?.Tables[0];
+                    else if (dataGridView6.Rows.Count == 1) dataGridView6.Rows.RemoveAt(0);
                 }
                 else if (tabControl1.SelectedIndex == 6)
                 {
                     DataSet ds = new DataSet();
                     ds.ReadXml(Application.StartupPath + @"\day8.xml", XmlReadMode.Auto);
-                    dataGridView7.DataSource = ds.Tables[0];
+                    if (ds.Tables.Count > 0)
+                        dataGridView7.DataSource = ds?.Tables[0];
+                    else if (dataGridView7.Rows.Count == 1) dataGridView7.Rows.RemoveAt(0);
                 }
             }
             catch (Exception)
@@ -89,7 +105,7 @@ namespace WindowsMedia_with_List
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             String[] fileten;
             String[] filepath;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -104,12 +120,12 @@ namespace WindowsMedia_with_List
                 btluu.Enabled = true;
             }
             Random rd = new Random();
-           txtid.Text = rd.Next(1, 100000).ToString();
+            txtid.Text = rd.Next(1, 100000).ToString();
             // update_ToDocument(1)
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >=0)
+            if (e.RowIndex >= 0)
             {
                 txtten.Text = dataGridView1.Rows[e.RowIndex].Cells["ten"].Value.ToString();
                 txtid.Text = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString();
@@ -174,10 +190,10 @@ namespace WindowsMedia_with_List
                 {
                     case 0:
                         xmlhelper.insertToDocument(Application.StartupPath + "\\day2.xml", newPhim);
-                    break;
+                        break;
                     case 1:
                         xmlhelper.insertToDocument(Application.StartupPath + "\\day3.xml", newPhim);
-                    break;
+                        break;
                     case 2:
                         xmlhelper.insertToDocument(Application.StartupPath + "\\day4.xml", newPhim);
                         break;
@@ -197,7 +213,7 @@ namespace WindowsMedia_with_List
                 capnhap();
                 reset();
             }
-            else if ( btsua.Enabled == true )
+            else if (btsua.Enabled == true)
             {
                 Dictionary<string, string> newPhim = new Dictionary<string, string>();
                 newPhim.Add("ten", txtten.Text);
@@ -207,8 +223,8 @@ namespace WindowsMedia_with_List
                 switch (tabControl1.SelectedIndex)
                 {
                     case 0:
-                     xmlhelper.updateAnElement(Application.StartupPath + "\\day2.xml", txtid.Text, newPhim);
-                     break;
+                        xmlhelper.updateAnElement(Application.StartupPath + "\\day2.xml", txtid.Text, newPhim);
+                        break;
                     case 1:
                         xmlhelper.updateAnElement(Application.StartupPath + "\\day3.xml", txtid.Text, newPhim);
                         break;
@@ -313,7 +329,7 @@ namespace WindowsMedia_with_List
                 catch (Exception)
                 {
                 }
-                
+
             }
         }
 
@@ -350,7 +366,7 @@ namespace WindowsMedia_with_List
                 catch (Exception)
                 {
                 }
-                
+
             }
         }
 
@@ -371,7 +387,7 @@ namespace WindowsMedia_with_List
 
 
                 }
-               
+
             }
         }
 

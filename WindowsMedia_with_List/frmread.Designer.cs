@@ -85,6 +85,7 @@
             this.Controls.Add(this.button1);
             this.Name = "frmread";
             this.Text = "frmread";
+            this.Load += new System.EventHandler(this.frmread_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

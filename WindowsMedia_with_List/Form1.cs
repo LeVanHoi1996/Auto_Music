@@ -1,17 +1,12 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 namespace WindowsMedia_with_List
 {
     public partial class Form1 : Form
@@ -51,14 +46,28 @@ namespace WindowsMedia_with_List
             {
                 checkBox2.Checked = false;
             }
-           // notifyIcon1.Visible = false;
+            // notifyIcon1.Visible = false;
             // Hiện BaloonTip hoặc không
-             //notifyIcon1.ShowBalloonTip(10);
+            //notifyIcon1.ShowBalloonTip(10);
             // Chọn ẩn
             //this.Hide();
             // Hoặc
             //this.ShowInTaskbar = false;
-           // WindowState = FormWindowState.Normal;
+            // WindowState = FormWindowState.Normal;
+            if (!File.Exists(Application.StartupPath + @"\day2.xml"))
+                File.Copy(Application.StartupPath.Replace(@"bin\Debug", "Resources") + @"\day2.xml", Application.StartupPath + @"\day2.xml");
+            if (!File.Exists(Application.StartupPath + @"\day3.xml"))
+                File.Copy(Application.StartupPath.Replace(@"bin\Debug", "Resources") + @"\day3.xml", Application.StartupPath + @"\day3.xml");
+            if (!File.Exists(Application.StartupPath + @"\day4.xml"))
+                File.Copy(Application.StartupPath.Replace(@"bin\Debug", "Resources") + @"\day4.xml", Application.StartupPath + @"\day4.xml");
+            if (!File.Exists(Application.StartupPath + @"\day5.xml"))
+                File.Copy(Application.StartupPath.Replace(@"bin\Debug", "Resources") + @"\day5.xml", Application.StartupPath + @"\day5.xml");
+            if (!File.Exists(Application.StartupPath + @"\day6.xml"))
+                File.Copy(Application.StartupPath.Replace(@"bin\Debug", "Resources") + @"\day6.xml", Application.StartupPath + @"\day6.xml");
+            if (!File.Exists(Application.StartupPath + @"\day7.xml"))
+                File.Copy(Application.StartupPath.Replace(@"bin\Debug", "Resources") + @"\day7.xml", Application.StartupPath + @"\day7.xml");
+            if (!File.Exists(Application.StartupPath + @"\day8.xml"))
+                File.Copy(Application.StartupPath.Replace(@"bin\Debug", "Resources") + @"\day8.xml", Application.StartupPath + @"\day8.xml");
         }
         private void list_FileNhac_SelectedIndexChanged(object sender, EventArgs e)
         {

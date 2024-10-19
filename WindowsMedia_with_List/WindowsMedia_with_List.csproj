@@ -134,7 +134,14 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\day2.xml" />
     <Content Include="music_48.ico" />
+    <Content Include="Resources\day3.xml" />
+    <Content Include="Resources\day4.xml" />
+    <Content Include="Resources\day5.xml" />
+    <Content Include="Resources\day6.xml" />
+    <Content Include="Resources\day7.xml" />
+    <Content Include="Resources\day8.xml" />
     <None Include="Resources\files-medical_32.png" />
     <None Include="Resources\business-time_32.png" />
     <None Include="Resources\11-logo-hv_1.png" />

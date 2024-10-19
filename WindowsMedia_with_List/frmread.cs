@@ -26,5 +26,10 @@ namespace WindowsMedia_with_List
             //speechSynthesizer.Speak(textBox1.Text);
             axWindowsMediaPlayer1.URL = string.Format(_apiURL,comboBox1.Text ,System.Net.WebUtility.UrlEncode(textBox1.Text));
         }
+
+        private void frmread_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

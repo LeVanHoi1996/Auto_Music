@@ -19,7 +19,7 @@ namespace WindowsMedia_with_List.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -77,6 +77,93 @@ namespace WindowsMedia_with_List.Properties {
             get {
                 object obj = ResourceManager.GetObject("business-time_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;rootElement&gt;
+        ///  &lt;Musics&gt;
+        ///    
+        ///  &lt;/Musics&gt;
+        ///&lt;/rootElement&gt;.
+        /// </summary>
+        internal static string day2 {
+            get {
+                return ResourceManager.GetString("day2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string day3 {
+            get {
+                return ResourceManager.GetString("day3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;rootElement&gt;
+        ///  &lt;Musics&gt;
+        ///
+        ///  &lt;/Musics&gt;
+        ///&lt;/rootElement&gt;.
+        /// </summary>
+        internal static string day4 {
+            get {
+                return ResourceManager.GetString("day4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;rootElement&gt;
+        ///  &lt;Musics&gt;
+        ///
+        ///  &lt;/Musics&gt;
+        ///&lt;/rootElement&gt;.
+        /// </summary>
+        internal static string day5 {
+            get {
+                return ResourceManager.GetString("day5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;rootElement&gt;
+        ///  &lt;Musics&gt;
+        ///
+        ///  &lt;/Musics&gt;
+        ///&lt;/rootElement&gt;.
+        /// </summary>
+        internal static string day6 {
+            get {
+                return ResourceManager.GetString("day6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;rootElement&gt;
+        ///  &lt;Musics&gt;
+        ///
+        ///  &lt;/Musics&gt;
+        ///&lt;/rootElement&gt;.
+        /// </summary>
+        internal static string day7 {
+            get {
+                return ResourceManager.GetString("day7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;rootElement&gt;
+        ///  &lt;Musics&gt;
+        ///
+        ///  &lt;/Musics&gt;
+        ///&lt;/rootElement&gt;.
+        /// </summary>
+        internal static string day8 {
+            get {
+                return ResourceManager.GetString("day8", resourceCulture);
             }
         }
         
